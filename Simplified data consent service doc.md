@@ -36,7 +36,7 @@ Web service URLs:
 
 Steps for simplified data request service
 
-PILT
+![PPic](https://github.com/sipsu1/AJ/blob/master/pic_simplified.png)
 
 ## POST /api/consent/references
 The query can be used to request consent references for valid consent(s) from the Data Consent Service.
