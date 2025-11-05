@@ -43,7 +43,7 @@ Päringu abil saab küsida Andmenõusolekuteenuselt kehtivate nõusoleku(te) nõ
 
 API URL:  https://<turvaserveri-aadress>/r1/ee-dev/GOV/70006317/consent/consent-stage/api/consent/reference 
 
-** Sisend**
+**Sisend**
 Parameeter | On kohustuslik? | Andmetüüp | Kirjeldus
 ------------ | ------------- | ------------ | -------------
 idCode | jah | string | Andmesubjekti isikukood.
