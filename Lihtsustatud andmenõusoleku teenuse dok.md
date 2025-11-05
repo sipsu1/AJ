@@ -36,7 +36,7 @@ Veebiteenuse URLid:
 
 Lihtsustatud andmenõusoekuteenuse sammud
 
-PILT
+![Pilt](https://github.com/sipsu1/AJ/blob/master/pilt_lihtsustatud.png)
 
 ## POST /api/consent/references
 Päringu abil saab küsida Andmenõusolekuteenuselt kehtivate nõusoleku(te) nõusolekuviited (Consent Reference).
