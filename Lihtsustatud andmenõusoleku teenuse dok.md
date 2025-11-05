@@ -160,8 +160,8 @@ dataProcessorRegistryCode | string | Andmete edastaja volitatud töötleja regis
 validFrom | string | Nõusoleku kehtivus: alates... Timestamp sisuga string. Nt 01.01.2022
 validTo | string | Nõusoleku kehtivus: kuni... Timestamp sisuga string. Nt 01.01.2023
 files | string | Failide massiiv siseldab nii konteinerit, kui ka PDF faili.
-> type | string | Faili tüüp. Võimalikud väärtused on CONSENT_CONTAINER või GENERATED_PDF.
-> content | string | Faili sisu kodeeritud Base64 vormingusse. 
+type | string | Faili tüüp. Võimalikud väärtused on CONSENT_CONTAINER või GENERATED_PDF.
+content | string | Faili sisu kodeeritud Base64 vormingusse. 
 
 **Päringu näide**
 ```json
