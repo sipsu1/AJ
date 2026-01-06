@@ -5,6 +5,7 @@ Versiooni ajalugu
 | 0.1| 12 July 2025| Document created.
 | 0.2| 11 September 2025 | Document updated.
 | 0.3| 01 November 2025| Document revised.
+| 0.4| 06 January 2026| Document revised.
 
 
 ## Sisukord
@@ -13,7 +14,7 @@ Versiooni ajalugu
 * [GET /api/consent/validation/client](#get-apiconsentvalidationclient)
 * [POST /api/consent/third-party](#postapiconsentthird-party)
 * [POST /api/consent/third-party/container](#post-apiconsentthird-partycontainer)
-* [Veahaldus](#veahaldus)
+* [Error management](#error-management)
 
 ## General info
 
@@ -34,7 +35,8 @@ Web service URLs:
 * LIVE:  https://<security-server-address>/r1/EE/GOV/70006317/consent/consent/...
 * STAGE: https://<security-server-address>/r1/ee-dev/GOV/70006317/consent/consent-stage/...
 
-Steps for simplified data request service
+Steps for simplified data request service.
+The image is illustrative, showing what a simplified signing process might look like. The actual process depends on the business processes implemented in the specific institution.
 
 ![PPic](https://github.com/sipsu1/AJ/blob/master/pic_simplified.png)
 
@@ -139,7 +141,7 @@ language | no | string | 	Language code that determines the language of the data
 ```
 
 **Output**
-The response to the query is a data set of consent request(s) in JSON format. The response consists of an array containing one or more consent requests. A single consent request consists of consent request metadata and an unsigned digital container containing the consent request file in PDF format.
+The response to the request is a dataset of consent request(s) in JSON format. The response consists of an array that includes both an unsigned container containing a PDF and a separate consent request file in PDF format, which the client adds to the container themselves and sends back signed.
 
 Parameter | Data type | Description
 ------------ | ------------ | -------------
