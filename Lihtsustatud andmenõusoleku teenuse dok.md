@@ -5,6 +5,7 @@ Versiooni ajalugu
 | 0.1| 12.06.2025 | Dokument loodud
 | 0.2| 11.09.2025 | Dokument täiendatud
 | 0.3| 01.11.2025 | Dokument muudetud
+| 0.4| 06.01.2026 | Dokument muudetud
 
 
 ## Sisukord
@@ -34,7 +35,8 @@ Veebiteenuse URLid:
 * LIVE: https://\<turvaserveri-aadress\>/r1/EE/GOV/70006317/consent/consent/\... 
 * STAGE: https://\<turvaserveri-aadress\>/r1/ee-dev/GOV/70006317/consent/consent-stage/\... 
 
-Lihtsustatud andmenõusoekuteenuse sammud
+Lihtsustatud andmenõusoekuteenuse sammud.
+Pilt on illustratiivne, et milline võib välja näha lihtsustatud allkirjastamise protsess. Tegelik protsess sõltub konkreetses asutuses juurutatud äriprotsessidest.
 
 ![Pilt](https://github.com/sipsu1/AJ/blob/master/pilt_lihtsustatud.png)
 
@@ -138,7 +140,7 @@ language | ei | string | Keelekood, mis määrab andmete keele. Kasutatakse kahe
 ```
 
 **Väljund**
-Päringu vastuseks antakse nõusolekutaotlus(t)e andmekomplekt JSON kujul. Vastus koosneb massiivist, mis sisaldab üks kuni mitu nõusolekutaotlust. Üks nõusolekutaotlus koosneb nõusolekutaotluse metaandmetest ja allkirjastamata digikonteinerist, milles sisaldub nõusolekutaotluse fail pdf kujul.
+Päringu vastuseks antakse nõusolekutaotlus(t)e andmekomplekt JSON kujul. Vastus koosneb massiivist, mis sisaldab nii allkirjastamata konteinerit, mis sisaldab PDFi kui ka eraldi nõusolekutaotluse faili PDF kujul, mille klient lisab ise konteinerisse ja saadab allkirjastatult tagasi. 
 
 Parameeter | Andmetüüp | Kirjeldus
 ------------ | ------------ | -------------
