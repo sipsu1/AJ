@@ -6,6 +6,7 @@ Versiooni ajalugu
 | 0.2| 11 September 2025 | Document updated.
 | 0.3| 01 November 2025| Document revised.
 | 0.4| 06 January 2026| Document revised.
+| 0.5| 28 January 2026| Document update. Error code updates.
 
 
 ## Sisukord
@@ -289,12 +290,16 @@ HTTP_NOT_FOUND - The X-road client is not the same as the one specified in the c
 ## Error management
 HTTP code | Error code | Description
 ------------ | ------------- | ------------ 
-200 |  | The query was successful and the corresponding query output is displayed.
-400 | VALIDATION | General validation error messages (mandatory fields not specified, personal code <>11 characters, non-numeric).
-400 | ERROR.BUSINESS.IDCODE-INVALID	| The personal identification code does not comply with the standard.
-404 | | The combination of the current statement of objectives and subsystem was not found for all requested consents.
-500 | REQUESTED_CONSENTS_RELATED_TO_INVALID_DEC LARATIONS | The consents requested are related to invalid declarations of intent. The business identifiers requested that are related to invalid declarations of intent are listed in the error description in the declaration of intent microservice database.
-500 | ALL_REQUESTED_CONSENTS_HAVE_ALREADY_BEEN _APPROVED | Multiple consent requests if all consents found are in APPROVED status.
-500 | DATA_SUBJECT_ERROR | According to the personal identification code, the person is a minor and/or legally incompetent.
+200 | OK | The query was successful and the corresponding query output is displayed.
+400 | VALIDATION FAILURE | Validation failed, required fields are empty. 
+400 | BAD REQUEST | Incorrect query content.
+404 | NOT FOUND | The combination of the current statement of objectives and subsystem was not found for all requested consents. 
+404 | REQUESTED CONSENTS ARE NOT RELATED TO ANY PURPOSE DECLARATIONS | The purpose identifier does not correspond to any existing declaration. 
+500 | INVALID ID CODE | The personal identification code is incorrect or the format is wrong.
+500 | INTERNAL SERVER ERROR | Required field is missing or empty.
+500 | ALL REQUESTED CONSENTS HAVE ALREADY BEEN  APPROVED | Multiple consent requests if all consents found are in APPROVED status.
+500 | DATA SUBJECT ERROR | According to the personal identification code, the person is a minor and/or legally incompetent. 
+503 | NOT FOUND | Incorrect X-ROAD-CLIENT header. 
+
 
  
