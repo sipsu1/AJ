@@ -2,10 +2,11 @@ Versiooni ajalugu
 
 | Versioon | Kuupäev| Kirjeldus
 | ---------- | --- | -----------
-| 0.1| 12.06.2025 | Dokument loodud
-| 0.2| 11.09.2025 | Dokument täiendatud
-| 0.3| 01.11.2025 | Dokument muudetud
-| 0.4| 06.01.2026 | Dokument muudetud
+| 0.1| 12.06.2025 | Dokument loodud.
+| 0.2| 11.09.2025 | Dokument täiendatud.
+| 0.3| 01.11.2025 | Dokument muudetud.
+| 0.4| 06.01.2026 | Dokument muudetud.
+| 0.5| 28.01.2026 | Dokumendi täiendamine. Veakoodi täpsustused.
 
 
 ## Sisukord
@@ -286,12 +287,14 @@ errorCode | jah | string | „HTTP_NOT_FOUND“ - X-road client ei ole sama, mis
 ## Veahaldus
 HTTP kood | Veakood | Kirjeldus
 ------------ | ------------- | ------------ 
-200 |  | Päring õnnestus ja väljastatakse vastava päringu väljund.
-400 | VALIDATION | Validatsiooni üldised veateated (kohustuslikud väljad määramata, isikukood <>11 märki, mittenumbriline).
-400 | ERROR.BUSINESS.IDCODE-INVALID	| Isikukood ei vasta standardile.
-404 | | Kehtiva eesmärgideklaratsiooni ja alamsüsteemi kombinatsiooni ei leitud kõikide küsitud nõusolekute puhul.
-500 | REQUESTED_CONSENTS_RELATED_TO_INVALID_DEC LARATIONS | Küsitud nõusolekud on seotud kehtetute eesmärgideklaratsioonidega. Küsitud äriidentifikaatorid, mis on seotud kehtetute eesmärgideklaratsioon idega, eesmärgideklaratsiooni mikroteenuse andmebaasis on loetletud vea kirjelduses.
-500 | ALL_REQUESTED_CONSENTS_HAVE_ALREADY_BEEN _APPROVED | Nõusolekute mitmekordsel küsimisel juhul, kui kõik leitud nõusolekud on staatuses APPROVED.
-500 | DATA_SUBJECT_ERROR | Isikukoodi järgi on isik alaealine ja või teovõimetu.
-
+200 | OK | Päring õnnestus ja väljastatakse vastava päringu väljund.
+400 | VALIDATION FAILURE | Valideerimise ebaõnnestumine, kohustuslikud väljad on tühjad.
+400 | BAD REQUEST | Vigane päringu sisu.
+404 | NOT FOUND | Kehtiva eesmärgideklaratsiooni ja alamsüsteemi kombinatsiooni ei leitud kõikide küsitud nõusolekute puhul.
+404 | REQUESTED CONSENTS ARE NOT RELATED TO ANY PURPOSE DECLARATIONS | Eesmärgi identifikaator ei vasta ühelegi olemasolevale deklaratsioonile.
+500 | INVALID ID CODE | Isikukood on vigane või formaat vale.
+500 | INTERNAL SERVER ERROR | Kohustuslik väli on puudu või tühi.
+500 | ALL REQUESTED CONSENTS HAVE ALREADY BEEN  APPROVED | Nõusolekute mitmekordsel küsimisel juhul, kui kõik leitud nõusolekud on staatuses APPROVED.
+500 | DATA SUBJECT ERROR | Isikukoodi järgi on isik alaealine ja või teovõimetu.
+505 | NOT FOUND | Vale X-ROAD-CLIENT päises.
  
