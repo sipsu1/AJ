@@ -7,6 +7,7 @@ Versiooni ajalugu
 | 0.3| 01 November 2025| Document revised.
 | 0.4| 06 January 2026| Document revised.
 | 0.5| 28 January 2026| Document update. Error code updates.
+| 0.6| 21 April 2026| First name and last name removed from the /api/consent/third-party service input.
 
 
 ## Sisukord
@@ -124,16 +125,12 @@ Parameter | Is it mandatory? | Data type | Description
 ------------ | ------------- | ------------ | -------------
 idCode | yes | string | Personal identification code of the data subject.
 purposeDeclarationBusinessIdentifiers | yes | array of String | Identifier of the statement of objectives. There can be several.
-firstName | yes | string | First name of the data subject.
-lastName | yes | string | The data subject's surname.
 language | no | string | 	Language code that determines the language of the data. Two-letter codes are used (e.g., "en" for English, "et" for Estonian). The default value is "et". 
 
 **Query example**
 ```json
 {
   "idCode": "60001019906",
-  "firstName": "Jaan",
-  "lastName": "Tamm",
   "purposeDeclarationBusinessIdentifiers": [
     "ED_KAKS",
     "ED_KOLM"
