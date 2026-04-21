@@ -7,6 +7,7 @@ Versiooni ajalugu
 | 0.3| 01.11.2025 | Dokument muudetud.
 | 0.4| 06.01.2026 | Dokument muudetud.
 | 0.5| 28.01.2026 | Dokumendi täiendamine. Veakoodi täpsustused.
+| 0.6| 21.04.2026 | Eemaldatud teenuse /api/consent/third-party sisendist ees- ja perekonnanimi
 
 
 ## Sisukord
@@ -123,16 +124,12 @@ Parameeter | On kohustuslik? | Andmetüüp | Kirjeldus
 ------------ | ------------- | ------------ | -------------
 idCode | jah | string | Andmesubjekti isikukood.
 purposeDeclarationBusinessIdentifiers | jah | array of String | Eesmärgideklaratsiooni identifikaator. Saab olla mitu.
-firstName | jah | string | Andmesubjekti eesnimi.
-lastName | jah | string | Andmesubjekti perekonnanimi.
 language | ei | string | Keelekood, mis määrab andmete keele. Kasutatakse kahetähelisi koode (nt "en" – inglise, "et" – eesti). Vaikimisi väärtus "et". 
 
 **Päringu näide**
 ```json
 {
   "idCode": "60001019906",
-  "firstName": "Jaan",
-  "lastName": "Tamm",
   "purposeDeclarationBusinessIdentifiers": [
     "ED_KAKS",
     "ED_KOLM"
